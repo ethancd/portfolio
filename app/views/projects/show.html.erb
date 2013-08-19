@@ -5,11 +5,11 @@
 <% if @project.demo %>
   <small>Demo login info: username "demo", password "12341234"</small>
   <a href="<%= @project.live %>">
-    <%= @project.live[12..-1] %>
+    <%= @project.live[11..-1] %>
   </a>
 <% else %>
   <a href="<%= @project.live %>">
     <%= @project.live %>
   </a>
 <% end %>
-<a href="<%= @project.github %>"><%= @project.github %></a>
+<a href="<%= @project.github %>"><%= @project.github[8..-1] %></a>
