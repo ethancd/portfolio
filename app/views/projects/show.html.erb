@@ -1,0 +1,15 @@
+<h2><%= @project.title %></h2>
+
+<p><%= @project.description %></p>
+
+<% if @project.demo %>
+  <small>Demo login info: username "demo", password "12341234"</small>
+  <a href="<%= @project.live %>">
+    <%= @project.live[12..-1] %>
+  </a>
+<% else %>
+  <a href="<%= @project.live %>">
+    <%= @project.live %>
+  </a>
+<% end %>
+<a href="<%= @project.github %>"><%= @project.github %></a>
