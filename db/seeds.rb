@@ -14,8 +14,8 @@ Project.create([
    Devise login, asset management through Paperclip and Amazon S3, and chat, 
    drag and drop, and AJAX updating through jQuery."
   },
-  {title: "Snake/Life", live: "ethancd.github.io/snake_life",
-   github: "https://gitub.com/ethancd/snake_life",
+  {title: "Snake/Life", live: "http://ethancd.github.io/snake_life/",
+   github: "https://github.com/ethancd/snake_life",
    description: "A variant of the classic Snake game that has Conway's Game 
    of Life active in the background as an additional obstacle. Written in 
    JavaScript."}
