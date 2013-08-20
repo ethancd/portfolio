@@ -3,22 +3,28 @@
 
 <p><%= @project.description %></p>
 
-<nav>
-  <ul>
-    <li>
-    <% if @project.demo %>
-      <a href="<%= @project.live %>">
-        <%= @project.live[11..-1] %>
-      </a>
-      <small>
-        <br>Demo login info:<br>username "demo"<br>password "12341234"
-      </small>
-    <% else %>
-      <a href="<%= @project.live %>">
-        <%= @project.live[7..-2] %>
-      </a>
-    <% end %></li>
 
-    <li><a href="<%= @project.github %>"><%= @project.github[8..-1] %></a></li>
-  </ul>
-</nav>
+  <nav>
+    <ul> 
+      <% if @project.demo %>
+      <li>View at
+        <a href="<%= @project.live %>">
+          <%= @project.live[11..-1] %>
+        </a>
+        <small>
+          username "demo"<br>password "12341234"
+        </small>
+      </li>
+      <% else %>
+      <li style="margin-bottom:20px;">View at
+        <a href="<%= @project.live %>">
+          <%= @project.live[7..-2] %>
+        </a>
+      </li>
+      <% end %>
+
+      <li class="right-clear">Check out the code at
+        <a href="<%= @project.github %>"><%= @project.github[8..-1] %></a>
+      </li>
+    </ul>
+  </nav>
