@@ -7,25 +7,33 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<header>
-  <h1><%= link_to "Ethan Dickinson", root_url %></h1>
-  <nav>
-    <ul>
-      <li>Projects</li>
-      <li><%= link_to "Deev Games", project_url(1) %></li>
-      <li><%= link_to "Snake/Life", project_url(2) %></li>
-    </ul>
-  </nav>
-</header>
+<div class="wrap">
+  <header class="group center">
+    <h1><%= link_to "Ethan Dickinson", root_url %></h1>
+    
+    <nav class="group">
+      <ul class="group">
+        <li>Projects</li>
+        <li><%= link_to "Deev Games", project_url(1) %></li>
+        <li><%= link_to "Snake/Life", project_url(2) %></li>
+      </ul>
+    </nav>
+  </header>
+</div>
 
-<%= yield %>
+<section class="group center">
+  <%#= image_tag "profile.png" %>
+  <div class="image">Profile Picture</div>
 
-<footer>
-  <small>Contact me at
-    <a href="mailto:ethancdickinson@gmail.com">
-      ethancdickinson@gmail.com
-    </a>
-  </small>
-</footer>
+  <%= yield %>
+
+  <footer class="center">
+    <small>Contact me at
+      <a href="mailto:ethancdickinson@gmail.com">
+        ethancdickinson@gmail.com
+      </a>
+    </small>
+  </footer>
+</section>
 </body>
 </html>
