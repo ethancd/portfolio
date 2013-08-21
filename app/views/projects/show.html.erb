@@ -18,7 +18,7 @@
         </small>
       </li>
       <% else %>
-      <li style="margin-bottom:20px;">View at
+      <li style="margin-bottom:20px;">Live at
         <a href="<%= @project.live %>">
           <%= @project.live[7..-2] %>
         </a>
@@ -42,9 +42,9 @@
 
 <figure class="center">
   <% if @project.title == "Deev Games" %>
-    <img src="<%= asset_path("deevgames_main.png") %>">
-    <img src="<%= asset_path("deevgames_tank.png") %>">
-    <img src="<%= asset_path("deevgames_game.png") %>">
+    <%= image_tag "deevgames_main.png" %>"
+    <%= image_tag "deevgames_tank.png" %>"
+    <%= image_tag "deevgames_game.png" %>"
   <% elsif @project.title == "Snake/Life" %>
   <% end %>
 </figure>
