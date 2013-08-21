@@ -1,13 +1,15 @@
+<section class="group center">
+  <%= image_tag "profile.jpg" %>
 
-<h2><%= @project.title %></h2>
+  <h2><%= @project.title %></h2>
 
-<p><%= @project.description %></p>
+  <p><%= @project.description %></p>
 
 
   <nav>
     <ul> 
       <% if @project.demo %>
-      <li>View at
+      <li>Live at
         <a href="<%= @project.live %>">
           <%= @project.live[11..-1] %>
         </a>
@@ -28,3 +30,21 @@
       </li>
     </ul>
   </nav>
+
+  <footer class="center">
+    <small>Contact me at
+      <a href="mailto:ethancdickinson@gmail.com">
+        ethancdickinson@gmail.com
+      </a>
+    </small>
+  </footer>
+</section>
+
+<figure class="center">
+  <% if @project.title == "Deev Games" %>
+    <img src="<%= asset_path("deevgames_main.png") %>">
+    <img src="<%= asset_path("deevgames_tank.png") %>">
+    <img src="<%= asset_path("deevgames_game.png") %>">
+  <% elsif @project.title == "Snake/Life" %>
+  <% end %>
+</figure>
